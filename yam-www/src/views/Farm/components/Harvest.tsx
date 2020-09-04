@@ -29,9 +29,9 @@ const Harvest: React.FC<HarvestProps> = ({ poolContract }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>🍠</CardIcon>
+            <CardIcon><img src="../../../asssets/img/fish.png"></img></CardIcon>
             <Value value={getDisplayBalance(earnings)} />
-            <Label text="YAMs earned" />
+            <Label text="FISH earned" />
           </StyledCardHeader>
           <StyledCardActions>
             <Button onClick={onReward} text="Harvest" disabled={!earnings.toNumber()} />

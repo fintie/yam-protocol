@@ -98,7 +98,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const poolActive = startTime * 1000 - Date.now() <= 0
   return (
     <StyledCardWrapper>
-      {farm.id === 'ycrv_yam_uni_lp' && (
+      {farm.id === 'ycrv_uni_lp' && (
         <StyledCardAccent />
       )}
       <Card>

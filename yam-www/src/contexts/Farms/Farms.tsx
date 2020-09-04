@@ -13,15 +13,15 @@ import Context from './context'
 import { Farm } from './types'
 
 const NAME_FOR_POOL: { [key: string]: string } = {
-  yfi_pool: 'YFI Farm',
-  eth_pool: 'Weth Homestead',
-  ampl_pool: 'Ample Soils',
-  ycrv_pool: 'Eternal Lands',
-  comp_pool: 'Compounding Hills',
-  link_pool: 'Marine Gardens',
-  lend_pool: 'Aave Agriculture',
-  snx_pool: 'Spartan Grounds',
-  mkr_pool: 'Maker Range',
+  yfi_pool: 'Pool 9',
+  eth_pool: 'Pool 8',
+  ampl_pool: 'Pool 7',
+  ycrv_pool: 'Pool 6',
+  comp_pool: 'Pool 5',
+  link_pool: 'Pool 4',
+  lend_pool: 'Pool 3',
+  snx_pool: 'Pool 2',
+  mkr_pool: 'Pool 1',
 }
 
 const ICON_FOR_POOL: { [key: string]: string } = {
@@ -70,7 +70,7 @@ const Farms: React.FC = ({ children }) => {
       } else if (tokenKey === 'ampl') {
         tokenKey = 'ampl_eth_uni_lp'
       } else if (tokenKey === 'ycrv') {
-        tokenKey = 'ycrv_yam_uni_lp'
+        tokenKey = 'ycrv_uni_lp'
       }
 
       const method = pool.methods[tokenKey]
@@ -86,7 +86,7 @@ const Farms: React.FC = ({ children }) => {
           name: NAME_FOR_POOL[poolKey],
           depositToken: tokenKey,
           depositTokenAddress: tokenAddress,
-          earnToken: 'yam',
+          earnToken: 'FISH',
           earnTokenAddress: yamAddress,
           icon: ICON_FOR_POOL[poolKey],
           id: tokenKey,

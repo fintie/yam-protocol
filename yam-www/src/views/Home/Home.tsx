@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import farmer from '../../assets/img/farmer.png'
+import farmer from '../../assets/img/fishing.png'
 
 import Button from '../../components/Button'
 import Container from '../../components/Container'
@@ -16,17 +16,17 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon="🗣"
-        subtitle="Vote on the future of the YAM protocol."
-        title="YAMV2 governance is live."
+        subtitle="Today's another good fishing day!"
+        title="Welcome Fish Pool."
       />
       <Container>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
         }}>
-          <Button href="https://snapshot.page/#/yam" text="View Proposals" />
+          <Button href="" text="View Proposals" />
           <Spacer />
-          <Button href="https://forum.yam.finance" text="Governance Forum" />
+          <Button href="" text="Governance Forum" />
         </div>
         <Spacer size="lg" />
         <Balances />
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
         }}>
           <Button
             size="sm"
-            text="View V1 Farms"
+            text="Go to the Pool"
             to="/farms"
             variant="secondary"
            />
