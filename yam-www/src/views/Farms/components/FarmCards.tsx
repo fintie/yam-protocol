@@ -45,7 +45,7 @@ const FarmCards: React.FC = () => {
         </StyledRow>
       )) : (
           <StyledLoadingWrapper>
-            <Loader text="Loading farms" />
+            <Loader text="Loading pools" />
           </StyledLoadingWrapper>
         )}
     </StyledCards>
