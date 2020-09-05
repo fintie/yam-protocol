@@ -14,7 +14,7 @@ import {
 export const yam = new Yam(
   "http://localhost:8545/",
   // "http://127.0.0.1:9545/",
-  "1001",
+  "3",
   true, {
     defaultAccount: "",
     defaultConfirmations: 1,
@@ -30,7 +30,7 @@ const oneEther = 10 ** 18;
 
 describe("token_tests", () => {
   let snapshotId;
-  let user = "0x683A78bA1f6b25E29fbBC9Cd1BFA29A51520De84";
+  let user = "0xefd6c47768e44b791c9cd1765f9abd12a03b7140";
   let new_user;
   beforeAll(async () => {
     const accounts = await yam.web3.eth.getAccounts();
