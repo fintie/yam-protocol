@@ -30,7 +30,7 @@ const oneEther = 10 ** 18;
 
 describe("token_tests", () => {
   let snapshotId;
-  let user = "0xefd6c47768e44b791c9cd1765f9abd12a03b7140";
+  let user = "0x5409ED021D9299bf6814279A6A1411A7e866A631";
   let new_user;
   beforeAll(async () => {
     const accounts = await yam.web3.eth.getAccounts();
