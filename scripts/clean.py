@@ -1,6 +1,6 @@
 import json
 from pprint import pprint
-networkId = "1"
+networkId = "3"
 networkId2 = "1001"
 from os import listdir
 from os.path import isfile, join

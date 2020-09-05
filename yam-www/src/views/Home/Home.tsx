@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <PageHeader
         icon="🗣"
         subtitle="Today's another good fishing day!"
-        title="Welcome Fish Pool."
+        title="Welcome to Fish Pool."
       />
       <Container>
         <div style={{
