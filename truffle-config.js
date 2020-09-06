@@ -22,10 +22,10 @@ module.exports = {
     test: {
       host: '0.0.0.0',
       port: 8545,
-      network_id: '1001',
+      network_id: '3',
       gasPrice: 50000000000,
       gas: 8000000,
-      network_id: '1001',
+      network_id: '3',
     },
     distribution: {
       host: '0.0.0.0',
