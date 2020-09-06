@@ -26,6 +26,7 @@ module.exports = {
       gasPrice: 50000000000,
       gas: 8000000,
       network_id: '3',
+      from: "0x5409ED021D9299bf6814279A6A1411A7e866A631"
     },
     distribution: {
       host: '0.0.0.0',
