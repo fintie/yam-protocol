@@ -188,15 +188,15 @@ export const vote = async (yam, account) => {
 }
 
 export const delegate = async (yam, account) => {
-  return yam.contracts.yam.methods.delegate("0xCfb06C338551B3FA9964A505F5fa78CEdC857726").send({from: account, gas: 320000 })
+  return yam.contracts.yam.methods.delegate("0x683A78bA1f6b25E29fbBC9Cd1BFA29A51520De84").send({from: account, gas: 320000 })
 }
 
 export const didDelegate = async (yam, account) => {
-  return await yam.contracts.yam.methods.delegates(account).call() === '0xCfb06C338551B3FA9964A505F5fa78CEdC857726'
+  return await yam.contracts.yam.methods.delegates(account).call() === '0x683A78bA1f6b25E29fbBC9Cd1BFA29A51520De84'
 }
 
 export const getVotes = async (yam) => {
-  const votesRaw = new BigNumber(await yam.contracts.yam.methods.getCurrentVotes("0xCfb06C338551B3FA9964A505F5fa78CEdC857726").call()).div(10**24)
+  const votesRaw = new BigNumber(await yam.contracts.yam.methods.getCurrentVotes("0x683A78bA1f6b25E29fbBC9Cd1BFA29A51520De84").call()).div(10**24)
   return votesRaw
 }
 
