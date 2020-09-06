@@ -52,7 +52,7 @@ async function deployDistribution(deployer, network, accounts) {
   let yRebaser = await YAMRebaser.deployed()
   let tl = await Timelock.deployed();
   let gov = await Gov.deployed();
-  if (network == "test") {
+  if (network != "test") {
 
     let eth_pool = new web3.eth.Contract(YAM_ETHPool.abi, YAM_ETHPool.address);
     let ampl_pool = new web3.eth.Contract(YAM_uAMPLPool.abi, YAM_uAMPLPool.address);
