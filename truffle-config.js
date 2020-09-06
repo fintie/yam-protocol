@@ -30,17 +30,17 @@ module.exports = {
     distribution: {
       host: '0.0.0.0',
       port: 8545,
-      network_id: '1001',
+      network_id: '3',
       gasPrice: 50000000000,
       gas: 8000000,
-      network_id: '1001',
+      network_id: '3',
     },
     test_ci: {
       host: '0.0.0.0',
       port: 8545,
       gasPrice: 1,
       gas: 10000000,
-      network_id: '1001',
+      network_id: '3',
     },
     mainnet: {
       network_id: '1',
