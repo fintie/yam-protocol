@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState }  from 'react'
 import styled from 'styled-components'
 
 import farmer from '../../assets/img/fishing.png'
+import fish from '../../assets/img/fish.png'
 
 import Button from '../../components/Button'
 import Container from '../../components/Container'
@@ -11,30 +12,37 @@ import Spacer from '../../components/Spacer'
 
 import Balances from './components/Balances'
 
+import ReactDOM from 'react-dom';
+import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countdown';
+
 const Home: React.FC = () => {
+
+  // const renderer = (countdownProps: CountdownRenderProps) => {
+  //   const { hours, minutes, seconds } = countdownProps
+  //   const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds
+  //   const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes
+  //   const paddedHours = hours < 10 ? `0${hours}` : hours
+  //   return (
+  //     <span style={{ width: '100%' }}>{paddedHours}:{paddedMinutes}:{paddedSeconds}</span>
+  //   )
+  // }
   return (
     <Page>
       <PageHeader
-        icon="🗣"
-        subtitle="Today's another good fishing day!"
-        title="Welcome to Fish Pool."
+        icon={<img src={fish} height="96" />}
+        subtitle="The fishing season is coming! Your assets are secured here."
+        title="Welcome"
       />
-      <Container>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
-          <Button href="" text="View Proposals" />
-          <Spacer />
-          <Button href="" text="Governance Forum" />
-        </div>
-        <Spacer size="lg" />
-        <Balances />
-      </Container>
+ 
+      
+  <Countdown date={Date.now() + 70000000} />
+  Until the fishing contest starts!
+  
       <Spacer size="lg" />
         <div style={{
           margin: '0 auto'
         }}>
+
           <Button
             size="sm"
             text="Go to the Pool"

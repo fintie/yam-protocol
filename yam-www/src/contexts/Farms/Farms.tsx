@@ -12,40 +12,30 @@ import { getPoolContracts, getEarned } from '../../yamUtils'
 import Context from './context'
 import { Farm } from './types'
 
+import tinyfish from '../../assets/img/tinyfish.jpg'
+import fishing from '../../assets/img/fishing.png'
+import shrimp from '../../assets/img/shrimp.jpeg'
+import shark from '../../assets/img/shark.jpeg'
+
 const NAME_FOR_POOL: { [key: string]: string } = {
-  yfi_pool: 'Pool 9',
-  eth_pool: 'Pool 8',
-  ampl_pool: 'Pool 7',
-  ycrv_pool: 'Pool 6',
-  comp_pool: 'Pool 5',
-  link_pool: 'Pool 4',
-  lend_pool: 'Pool 3',
-  snx_pool: 'Pool 2',
-  mkr_pool: 'Pool 1',
+  ycrv_pool: 'Seed Pool',
+  ampl_pool: 'Fish Pond',
+  eth_pool: 'Shrimp Buffet',
+  yfi_pool: 'Shark Tank',
 }
 
 const ICON_FOR_POOL: { [key: string]: string } = {
-  yfi_pool: '🐋',
-  eth_pool: '🌎',
-  ampl_pool: '🌷',
-  comp_pool: '💸',
-  link_pool: '🔗',
-  lend_pool: '🏕️',
-  snx_pool: '⚔️',
-  mkr_pool: '🐮',
-  ycrv_pool: '🌈',
+  ycrv_pool: '🐟',
+  ampl_pool: '🎣',
+  eth_pool: '🦐',
+  yfi_pool: '🦈',
 }
 
 const SORT_FOR_POOL: { [key: string]: number } = {
-  yfi_pool: 0,
-  eth_pool: 1,
-  ampl_pool: 2,
-  comp_pool: 3,
   ycrv_pool: 4,
-  link_pool: 5,
-  lend_pool: 6,
-  snx_pool: 7,
-  mkr_pool: 8,
+  ampl_pool: 3,
+  eth_pool: 2,
+  yfi_pool: 1,
 }
 
 const Farms: React.FC = ({ children }) => {
@@ -61,16 +51,19 @@ const Farms: React.FC = ({ children }) => {
     const farmsArr: Farm[] = []
     const poolKeys = Object.keys(pools)
 
-    for (let i = 0; i < poolKeys.length; i++) {
+    for (let i = 0; i < 4; i++) {
       const poolKey = poolKeys[i]
       const pool = pools[poolKey]
+      console.log(pool);
       let tokenKey = poolKey.replace('_pool', '')
-      if (tokenKey === 'eth') {
-        tokenKey = 'weth'
-      } else if (tokenKey === 'ampl') {
-        tokenKey = 'ampl_eth_uni_lp'
+      if (tokenKey === 'ampl') {
+        tokenKey = 'fish_eth_univ2_lp'
       } else if (tokenKey === 'ycrv') {
-        tokenKey = 'ycrv_uni_lp'
+        tokenKey = 'usdt'
+      } else if (tokenKey === 'yfi') {
+      tokenKey = 'shirmp_eth_univ2_lp'
+      } else if (tokenKey === 'eth') {
+        tokenKey = 'usdc_eth_univ2_lp'
       }
 
       const method = pool.methods[tokenKey]

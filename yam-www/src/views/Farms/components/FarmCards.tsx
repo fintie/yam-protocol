@@ -95,7 +95,11 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
     }
   }, [yam, contract, account, setHarvestable])
   
-  const poolActive = startTime * 1000 - Date.now() <= 0
+  var poolActive = startTime * 1000 - Date.now() <= 0
+  // const poolActive;
+  if(farm.id == 'fish_eth_univ2_lp' || farm.id == 'shirmp_eth_univ2_lp' || farm.id == 'usdc_eth_univ2_lp') {
+       poolActive = false;
+  }
   return (
     <StyledCardWrapper>
       {farm.id === 'ycrv_uni_lp' && (
@@ -117,7 +121,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <Button
               disabled={!poolActive}
               text={poolActive ? 'Select' : undefined}
-              to={`/farms/${farm.id}`}
+              href={"https://uniswap.info/pair/0x96709cb48ceE42d6000af379FD0Def353BAE9B2f"}
             >
               {!poolActive && <Countdown date={new Date(startTime * 1000)} renderer={renderer} />}
             </Button>
