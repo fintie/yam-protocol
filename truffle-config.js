@@ -56,16 +56,17 @@ module.exports = {
       timeoutBlocks: 800,
     },
     ropsten: {
-      network_id: '3',
-      provider: () => new HDWalletProvider(
-        [process.env.DEPLOYER_PRIVATE_KEY],
-        'https://ropsten.infura.io/v3/18d6a009c9f74841b99511c2515c8119',
-        0,
-        1,
-      ),
+      provider: () => {
+        return new HDWalletProvider(
+          "credit brick casual traffic garbage hungry napkin beyond offer cinnamon angle visa", 
+          "https://ropsten.infura.io/v3/18d6a009c9f74841b99511c2515c8119",
+          0,
+          1
+        );
+      },
+      network_id: 3,
       gasPrice: 10000000000, // 10 gwei
       gas: 6900000,
-      from: process.env.DEPLOYER_ACCOUNT,
       timeoutBlocks: 500,
     },
     kovan: {
