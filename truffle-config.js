@@ -70,15 +70,15 @@ module.exports = {
       timeoutBlocks: 500,
     },
     kovan: {
-      network_id: '42',
       provider: () => {
         return new HDWalletProvider(
           [process.env.DEPLOYER_PRIVATE_KEY],
           'https://kovan.infura.io/v3/04c5f76635f24c70b28488be34dbd838',
           0,
-          1,
+          1
         );
       },
+      network_id: '42',
       gasPrice: 10000000000, // 10 gwei
       gas: 6900000,
       from: process.env.DEPLOYER_ACCOUNT,
