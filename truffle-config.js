@@ -66,7 +66,7 @@ module.exports = {
       },
       network_id: 3,
       gasPrice: 10000000000, // 10 gwei
-      gas: 4600000,
+      gas: 2100000,
       timeoutBlocks: 500,
     },
     kovan: {
